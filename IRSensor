@@ -1,0 +1,23 @@
+int IRsensor = 9;
+
+void setup() {
+   Serial.begin(115200);
+   Serial.println("Serial Working");
+   pinMode(IRsensor, INPUT);
+}
+
+void loop() {
+  int sensorStatus = digitalRead(IRsensor);
+  if(sensorStatus ==1)
+  {
+    Serial.println("Motion Ended");
+  }
+  else
+  {
+   Serial.println("Motion Detected");
+  }
+  delay(500);
+  }
+  
+  
+  // motor used stepper and server
